@@ -3,7 +3,7 @@
 import os
 import re
 import json
-from itertools import  zip_longest
+from itertools import zip_longest
 
 
 def split_sentence(sentence):
@@ -25,7 +25,7 @@ class DatasetBase():
 
     def clean_sentence(self, sentence):
         if self.is_delete_end_punctuation:
-            sentence = re.sub(r'[？。！?.!]$', sentence)
+            sentence = re.sub(r'[？。！?.!]$', '', sentence)
         return sentence
 
 
